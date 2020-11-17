@@ -1,28 +1,22 @@
 class Canal_network:
-    seg_dic = {}
-    first = None
-    A = {}
-    N = {}
+    segment_dic = {}
+    first_segment = None
+    arcs = {} #Dictionnary with arc objects
+    nodes = {} #Dictionnary with node objects
 
     def __init__(self, dic, f):
-        self.seg_dic = dic
-        self.first = f
-        self.N = self.construct_nodes()
-        self.A = self.construct_arcs()
+        self.segment_dic = dic
+        self.first_segment = f
+        self.nodes, self.arcs = self.construct_graph()
 
-    def construct_nodes(self):
-        n = len(self.seg_dic)
+    def construct_graph(self):
+
+
+
         net = {}
         net[str(0)] = 0
         seg = self.first
-        for i in range(1,n+1):
+        for i in range(1,len(self.segment_dic)+1):
             net[str(i)] = net[str(i-1)] + self.seg_dic[seg].length
             seg = self.seg_dic[seg].suc
-        return net
-
-    def construct_arcs(self):
-        arc = {}
-        for i in range(len(self.N)):
-            #arc[(self.N[str(i)], self.N[str(i+1)] = #length, time window
-            #arc[(self.N[str(i+1)], self.N[str(i)] = #length
-        return arc
+        return net, arc

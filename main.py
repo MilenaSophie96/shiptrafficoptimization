@@ -1,12 +1,7 @@
 from Segment import Segment
 from Canal_network import Canal_network
-
-# This is a sample Python script.
-
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
+from Request import Request
+#
 def collision_free_routing(canal_nw,request,time):
     # canal_nw: canal network
     # request: routing request
