@@ -11,7 +11,7 @@ def collision_free_routing(canal_nw,request,time):
     # canal_nw: canal network
     # request: routing request
     # time: time windows
-    test
+    test, test
     path = 0
 
     return path
