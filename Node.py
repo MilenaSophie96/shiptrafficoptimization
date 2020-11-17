@@ -1,7 +1,7 @@
 class Node:
-    name = -100
+    position = -100
     active_labels = []
     all_labels = []
 
-    def __init__(self, t):
-        self.name = t
+    def __init__(self, p):
+        self.position = p
