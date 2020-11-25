@@ -36,9 +36,9 @@ class Canal_network:
                 a[str(i-0.6), str(i)] = Arc("gamma", n[str(i-0.6)], n[str(i)],random_num, [])
                 #in the other direction 
                 n[str(i-0.4)] = Node(None, str(i-0.4))
-                a[str(i), str(i-0.4)] = Arc("alpha", n[str(i-1)], n[str(i-0.4)],random_num, [])
+                a[str(i), str(i-0.4)] = Arc("alpha", n[str(i)], n[str(i-0.4)],random_num, [])
                 a[str(i-0.4), str(i-0.4)] = Arc("beta", n[str(i-0.4)], n[str(i-0.4)],random_num, [])
-                a[str(i-0.4), str(i-1)] = Arc("gamma", n[str(i-0.4)], n[str(i)],random_num, [])
+                a[str(i-0.4), str(i-1)] = Arc("gamma", n[str(i-0.4)], n[str(i-1)],random_num, [])
             seg = self.segment_dic[seg].suc
         return n,a
 
