@@ -11,3 +11,6 @@ class Arc:
         self.head = h
         self.length = l
         self.forb_time = f_t
+
+    def add_forb_time(self,time_window):
+        self.forb_time.append(time_window)
