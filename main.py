@@ -19,10 +19,11 @@ def collision_free_routing(canal_nw,request,time):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     seg_list = {"seg1": Segment("transit",100,"seg2"),
-                "seg2": Segment("waiting",200,"seg3"),
+                "seg2": Segment("siding",200,"seg3"),
                 "seg3": Segment("transit",300,None)}
     first_seg = "seg1"
     can = Canal_network(seg_list, first_seg)
-    print(can.nodes, can.arcs)
+    can.print_nodes()
+    can.print_arcs()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

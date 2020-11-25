@@ -1,5 +1,5 @@
 class Segment:
-    type = "no_type" #transit or waiting 
+    type = "no_type" #transit or siding 
     length = -100
     suc = None
 
